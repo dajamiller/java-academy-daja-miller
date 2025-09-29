@@ -25,7 +25,6 @@ public class MortgageCalc {
 
 
 
-
         //output result
         System.out.println("Your monthly payment is $" + monthlyPayment + " and your total interest is $" + totalInterest );
     }
