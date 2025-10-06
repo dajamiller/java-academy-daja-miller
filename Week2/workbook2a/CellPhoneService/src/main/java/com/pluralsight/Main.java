@@ -5,10 +5,20 @@ import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    public static void display(CellPhone phone) {
+        System.out.println("--- Cell Phone Information ---");
+        System.out.println("Owner: " + phone.getOwnerName());
+        System.out.println("Model: " + phone.getModel());
+        System.out.println("Phone Number: " + phone.getPhoneNumber());
+        System.out.println("Carrier: " + phone.getCarrier());
+        System.out.println("Serial: " + phone.getSerialNumber());
+        System.out.println("------------------------------");
+    }
+
     public static void main(String[] args) {
 
         // create object
-        CellPhone cellPhone = new CellPhone();
+        CellPhone cellPhone1 = new CellPhone();
         // use scanner to ask for details
         System.out.println("Welcome to CellPhone Info Retrieval Tool!");
         Scanner scanner = new Scanner(System.in);
@@ -24,25 +34,44 @@ public class Main {
         String ownerName = scanner.nextLine().trim();
 
         // store values in object - using setters
-        cellPhone.setOwnerName(ownerName);
-        cellPhone.setPhoneNumber(phoneNumber);
-        cellPhone.setCarrier(carrier);
-        cellPhone.setModel(model);
-        cellPhone.setSerialNumber(serialNumber);
+        cellPhone1.setOwnerName(ownerName);
+        cellPhone1.setPhoneNumber(phoneNumber);
+        cellPhone1.setCarrier(carrier);
+        cellPhone1.setModel(model);
+        cellPhone1.setSerialNumber(serialNumber);
 
-        // display stored info
-        System.out.println("\n\n**Here is your Cell Phone Information: \n");
-        //System.out.println("Owner: " + ownerName + " \n" + "Carrier: " + carrier + " \n" + "Phone number: " + phoneNumber + " \n"  +  "Model: " + model + " \n" + "Serial Number: " + serialNumber);
+        CellPhone cellPhone2 = new CellPhone(
+                "Solja Boy",// model
+                "678-999-8212", // phone Number
+                "T-mobile", // carrier
+                "Sidekick", // model
+                "2345678" //serialNumber
+        );
+        System.out.println("*** Display Both Phone Stats ***");
+        display(cellPhone1);
+        display(cellPhone2);
 
-        // return with getters
-        System.out.println("Owner: " + cellPhone.getOwnerName());
-        System.out.println("Phone: " + cellPhone.getPhoneNumber());
-        System.out.println("Carrier: " + cellPhone.getCarrier());
-        System.out.println("Model: " + cellPhone.getModel());
-        System.out.println("Serial Number: " + cellPhone.getSerialNumber());
+        System.out.println("Test Call 1: " + cellPhone1.getOwnerName() + " calling " + cellPhone2.getOwnerName());
+        cellPhone1.dial(cellPhone2.getPhoneNumber());
+
+        System.out.println("Test Call 2: " + cellPhone2.getOwnerName() + " calling " + cellPhone1.getOwnerName());
+        cellPhone2.dial(cellPhone1.getPhoneNumber());
+
+        // close scanner - good practice
+        scanner.close();
 
     }
 }
+
+        // display stored info
+        // System.out.println("\n\n**Here is your Cell Phone Information: \n");
+        //System.out.println("Owner: " + ownerName + " \n" + "Carrier: " + carrier + " \n" + "Phone number: " + phoneNumber + " \n"  +  "Model: " + model + " \n" + "Serial Number: " + serialNumber);
+
+
+
+
+
+
 
 
 

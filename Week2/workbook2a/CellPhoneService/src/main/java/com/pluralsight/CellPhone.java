@@ -13,7 +13,7 @@ public class CellPhone {
 
     //---------------------------- parameterized constructor
 
-    public CellPhone(String model,  String serialNumber, String carrier, String phoneNumber, String ownerName) {
+    public CellPhone(String ownerName,  String phoneNumber, String carrier, String model, String serialNumber) {
         this.model = model;
         this.serialNumber = serialNumber;
         this.carrier = carrier;
@@ -55,6 +55,13 @@ public class CellPhone {
     }
     public void setOwnerName(String ownerName) {
         this.ownerName = ownerName;
+    }
+
+    // exercise 2 - calling phones
+
+    public void dial(String phoneNumberToCall) {
+        // this.getOwnerName - hw phone identifis itself
+        System.out.println(this.getOwnerName() + " is calling " +  phoneNumberToCall);
     }
 
 }
