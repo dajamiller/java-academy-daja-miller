@@ -67,7 +67,7 @@ public class Main {
         cellPhone2.dial(cellPhone1.getPhoneNumber());
 
         System.out.println("Test Call 3: \n" + cellPhone3.getOwnerName() + " calling " + cellPhone2.getOwnerName());
-        System.out.println(cellPhone2.getOwnerName() + " sanswers...: " + cellPhone3.getOwnerName() + "????");
+        System.out.println(cellPhone2.getOwnerName() + " answers...: " + cellPhone3.getOwnerName() + "????");
 
         // close scanner - good practice
         scanner.close();
