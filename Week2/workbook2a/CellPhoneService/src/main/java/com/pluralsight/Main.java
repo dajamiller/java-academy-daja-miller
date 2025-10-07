@@ -41,21 +41,33 @@ public class Main {
         cellPhone1.setSerialNumber(serialNumber);
 
         CellPhone cellPhone2 = new CellPhone(
-                "Solja Boy",// model
+                "Solja Boy",// owner name
                 "678-999-8212", // phone Number
                 "T-mobile", // carrier
                 "Sidekick", // model
                 "2345678" //serialNumber
         );
+        CellPhone cellPhone3 = new CellPhone(
+                "Drake",
+                "1-800-HOTLINE BLING",
+                "Metro PCS",
+                "Nokia",
+                "5745879"
+        );
+
         System.out.println("*** Display Both Phone Stats ***");
         display(cellPhone1);
         display(cellPhone2);
+        display(cellPhone3);
 
-        System.out.println("Test Call 1: " + cellPhone1.getOwnerName() + " calling " + cellPhone2.getOwnerName());
+        System.out.println("Test Call 1: \n" + cellPhone1.getOwnerName() + " calling " + cellPhone2.getOwnerName());
         cellPhone1.dial(cellPhone2.getPhoneNumber());
 
-        System.out.println("Test Call 2: " + cellPhone2.getOwnerName() + " calling " + cellPhone1.getOwnerName());
+        System.out.println("Test Call 2: \n" + cellPhone2.getOwnerName() + " calling " + cellPhone1.getOwnerName());
         cellPhone2.dial(cellPhone1.getPhoneNumber());
+
+        System.out.println("Test Call 3: \n" + cellPhone3.getOwnerName() + " calling " + cellPhone2.getOwnerName());
+        System.out.println(cellPhone2.getOwnerName() + " sanswers...: " + cellPhone3.getOwnerName() + "????");
 
         // close scanner - good practice
         scanner.close();

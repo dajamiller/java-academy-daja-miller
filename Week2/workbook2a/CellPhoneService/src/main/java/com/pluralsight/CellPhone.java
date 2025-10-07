@@ -63,5 +63,9 @@ public class CellPhone {
         // this.getOwnerName - hw phone identifis itself
         System.out.println(this.getOwnerName() + " is calling " +  phoneNumberToCall);
     }
+    public void dial(CellPhone phone) {
+        String targetNumber = phone.getPhoneNumber();
+        this.dial(targetNumber);
+    }
 
 }
