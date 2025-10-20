@@ -10,6 +10,6 @@ public class Doctor {
     }
 
     public void introduce() {
-        System.out.println("Dr. " + name + " - Specialization: " + specialization);
+        System.out.println("\nDr. " + name + " - Specialization: " + specialization);
     }
 }
