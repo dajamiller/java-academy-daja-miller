@@ -18,19 +18,24 @@ public class Room {
     }
 
     public double getPrice() {
-        return price % 2;
+        return price;
     }
 
     public boolean isOccupied() {
         return isOccupied;
     }
 
-    public boolean isClean() {
+    public boolean isDirty() {
         return isDirty;
+
+        // if not dirty
+        //return " is clean"; //does not need to be displayed?
     }
 
-    public boolean isAvailable() {
-        return isAvailable;
+    public void isAvailable() {
+    if (isDirty || isAvailable ) {
+        this.isAvailable = false;
+    }
     }
 
     public static void roomSelection() {
@@ -44,15 +49,22 @@ public class Room {
             String roomSelection = scanner.nextLine().trim().toLowerCase();
             switch (roomSelection) {
                 case "king" -> {
-                    price = 139;
-                    System.out.println("You have selected the room selection: " + roomSelection + " for $" + price + " per night.");
+
+//                    price = 139;
+//                    System.out.println("You have selected the room selection: " + roomSelection + " for $" + price + " per night.");
+//                    running = false;
 
                     break;
                 }
                 case "double" -> {
-                    price = 124;
-                    System.out.println("You have selected the  room selection: " + roomSelection + " for $" + price + " per night.");
+//                    price = 124;
+//                    System.out.println("You have selected the  room selection: " + roomSelection + " for $" + price + " per night.");
+//                    running = false;
                     break;
+
+                }
+                default -> {
+                    System.out.println("Invalid choice, try again");
 
                 }
             }

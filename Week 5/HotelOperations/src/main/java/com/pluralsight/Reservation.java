@@ -6,19 +6,19 @@ public class Reservation {
     private double price;
     private int numberOfNights;
     private boolean isWeekend;
-    private double reservationTotal;
+    //private double reservationTotal;// does not need backing variable
 
     public Reservation(String roomType, double price, int numberOfNights, boolean isWeekend) {
         this.roomType = roomType;
         this.price = price;
         this.numberOfNights = numberOfNights;
         this.isWeekend = isWeekend;
-        this.reservationTotal = 0;
+        //this.reservationTotal = 0;
     }
 
 
     public String getRoomType() {
-        return roomType;
+        return "You have reserved a " + roomType + "room.";
     }
     public String setRoomType() {
         return roomType;
@@ -28,6 +28,9 @@ public class Reservation {
     }
     public int getNumberOfNights() {
         return numberOfNights;
+    }
+    public double getReservationTotal() {
+        return price * numberOfNights;
     }
 
 
