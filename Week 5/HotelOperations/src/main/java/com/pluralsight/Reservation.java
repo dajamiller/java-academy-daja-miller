@@ -20,18 +20,28 @@ public class Reservation {
     public String getRoomType() {
         return "You have reserved a " + roomType + "room.";
     }
+
     public String setRoomType() {
         return roomType;
     }
-    public double getPrice() {
-        return price;
+
+    public double getPricePerNight() {
+        if (this.roomType.equals("king")) {
+            return 139;
+        } else {
+            return 124;
+        }
     }
+
     public int getNumberOfNights() {
-        return numberOfNights;
+        return this.numberOfNights;
     }
+
     public double getReservationTotal() {
-        return price * numberOfNights;
+        double pricePerNight = this.getPricePerNight();
+        if (this.isWeekend) {
+            pricePerNight = this.getPricePerNight() * 1.10;
+        }
+        return pricePerNight * this.numberOfNights;
     }
-
-
 }
