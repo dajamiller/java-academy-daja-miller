@@ -24,6 +24,12 @@ public class Main {
         Employee emp1 = new Employee("123456", "Daja", "Admin", 29.36, 65);
         System.out.println(emp1.getTotalPay());
 
+        emp1.punchIn();
+        emp1.punchOut();
+
+
+
+
 
 
     }

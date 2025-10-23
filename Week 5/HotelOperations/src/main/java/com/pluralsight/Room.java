@@ -1,7 +1,5 @@
 package com.pluralsight;
 
-import java.util.Scanner;
-
 public class Room {
 
     private int numberOfBeds;
@@ -46,6 +44,19 @@ public class Room {
         } else {
             return false;
         }
+    }
+    public String checkIn() {
+        this.isOccupied = true;
+        this.isDirty = true;
+        return "Guest is checked in!";
+        }
+    public String checkOut() {
+        this.cleanRoom();
+        this.isOccupied = false;
+        return "Room needs cleaning!";
+    }
+    public void cleanRoom() {
+
     }
 
     //public static void roomSelection(){}
