@@ -19,7 +19,6 @@ public class DealershipFileManager {
                 System.out.println("An error occurred.");
                 e.printStackTrace();
             }
-
     try (
     BufferedReader br = new BufferedReader(new FileReader("inventory.csv"))) {
         String line;

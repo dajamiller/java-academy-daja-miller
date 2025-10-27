@@ -52,7 +52,6 @@ public class Vehicle {
     public double getPrice() {
         return price;
     }
-
     public int getOdometer() {
         return odometer;
     }

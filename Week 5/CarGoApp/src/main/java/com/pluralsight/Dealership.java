@@ -22,7 +22,6 @@ public class Dealership {
         this.address = address;
         this.phone = phone;
     }
-
 //    getVehiclesByPrice(){
 //        return;
 //    }
