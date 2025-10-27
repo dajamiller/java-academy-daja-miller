@@ -15,11 +15,11 @@ class NameFormatterTest {
         String expectedFullName= last + ", " +  first;
 
         // act
-
+// call method to be testedString fullName = last + ", " + first;
 
 
         // assert
-        String fullName = last + ", " + first;
+
         assertEquals(expectedFullName, fullName);
 
         }

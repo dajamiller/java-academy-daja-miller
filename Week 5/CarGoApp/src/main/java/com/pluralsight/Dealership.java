@@ -23,9 +23,18 @@ public class Dealership {
         this.phone = phone;
     }
 
-    getVehiclesByPrice()[];
-    getVehiclesByMakeModel()[];
-    getVehiclesByYear()[];
-    getVehicles
-    }
+//    getVehiclesByPrice(){
+//        return;
+//    }
+//    getVehiclesByMakeModel(){
+//        return;
+//    }
+//    void getVehiclesByYear(){
+//        return;
+//    }
+//    getVehicles
+//    }
+
+
+
 }
