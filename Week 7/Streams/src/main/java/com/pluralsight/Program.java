@@ -39,19 +39,6 @@ public class Program {
             System.out.println(person.getFirstName() + " " + person.getLastName());
             }
         }
-        myscanner.close();
-        // average age
-        int avgAge;
-        int maxAge;
-        int minAge;
-
-        int totalAge = 0;
-
-        for  (Person person : people) {
-            int
-
-        }
-
 
 
     }
