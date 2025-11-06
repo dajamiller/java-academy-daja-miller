@@ -48,7 +48,7 @@ public class Program {
         int totalAge = 0;
 
         for  (Person person : people) {
-            int
+            test bug
 
         }
 
