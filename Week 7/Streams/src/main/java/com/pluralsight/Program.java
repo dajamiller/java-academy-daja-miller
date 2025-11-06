@@ -26,28 +26,31 @@ public class Program {
         System.out.print("\nPlease enter the name you would like to search (first or last): \n");
         String searchName = myscanner.nextLine().toLowerCase().trim();
 
-        List<Person> matches = new ArrayList<>();
+        List<Person> nameMatches = new ArrayList<>();
         for (Person person : people) {
             if (person.getFirstName().toLowerCase().contains(searchName) || person.getLastName().toLowerCase().contains(searchName))
-                matches.add(person);
+                nameMatches.add(person);
         }
         System.out.println("\nThe following names are matched:\n");
-        if (matches.isEmpty()) {
+        // error handling
+        if (nameMatches.isEmpty()) {
             System.out.println("No matches found.");
         } else {
-            for (Person person : matches) {
+            for (Person person : nameMatches) {
             System.out.println(person.getFirstName() + " " + person.getLastName());
             }
         }
         myscanner.close();
         // average age
+        System.out.println("~~~ Age Stats ~~~\n");
         int avgAge;
         int maxAge;
         int minAge;
 
-        int totalAge = 0;
+        double sum = 0;
 
         for  (Person person : people) {
+            int currentAge = person.getAge();
 
         }
 
